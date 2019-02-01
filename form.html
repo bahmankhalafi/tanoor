@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>تنور</title>
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="node_modules/rtl-bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+  <header>
+
+    <nav class="container">
+      <a class="navbar-brand" href="#">تنور</a>
+
+
+      <ul>
+        <li><a class="nav-link" href="#">آگهی‌های من</a></li>
+        <li><a class="btn btn-outline-success" href="#">ارسال آگهی رایگان</a></li>
+      </ul>
+      </div>
+    </nav>
+
+  </header>
+  <div class="container">
+
+    <div class="col-md-4 col-sm-8 col-xs-10 mr-auto">
+      <form id="newform" method="post" class="form-horizontal" role="form">
+        <div class="row">
+          <div class="col col-md-6  col-sm-6 col-xs-12">
+            <button class="custom-button" type="button">آگهی اجاره</button>
+          </div>
+          <div class="col col-md-6 col-sm-6">
+            <button class="custom-button" type="button">آگهی فروش</button>
+          </div>
+
+          <div class="col-sm-12">
+            <div class="form-group">
+              <select class="wide custom-form-select form-control" id="estate" name="estate" required>
+                <option hidden disabled selected value="" class="option-disabled">اجاره چی ؟</option>
+                <option value="home">خانه</option>
+                <option value="shop">مغازه</option>
+                <option value="office">دفتر کار</option>
+                <option value="land">زمین</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-sm-12">
+            <div class="form-group">
+              <select class="wide custom-form-select form-control" id="drpCity" name="country">
+                <option hidden disabled selected value="" class="option-disabled">کدام استان ؟</option>
+                <option value="fr">تهران</option>
+                <option value="de">اراک</option>
+                <option value="it">شیراز</option>
+                <option value="jp">اهواز</option>
+                <option value="ru">اصفهان</option>
+                <option value="gb">کرمان</option>
+                <option value="us">قم</option>
+              </select>
+            </div>
+          </div>
+
+
+          <div class="col-sm-12">
+            <div class="form-group">
+              <div class="input-group">
+                <input type="text" id="Fmetraj" class="form-control" autocomplete="off" maxlength="15" placeholder="متراژ"
+                  required aria-label="Dollar amount (with dot and two decimal places)">
+                <div class="input-group-append">
+                  <span class="input-group-text">متر</span>
+
+                </div>
+              </div>
+              <small id="textHelp" class="form-text text-muted">12 رقم بدون فاصله <span class="fa fa-long-arrow-left"></span>
+                1234567890 <span class="fa fa-exclamation-circle"></span> </small>
+            </div>
+          </div>
+          <div class="col-sm-12">
+            <div class="form-group">
+              <div class="input-group">
+                <input type="text" id="Fforoosh" class="form-control" autocomplete="off" maxlength="15" placeholder="اجاره"
+                  required aria-label="Dollar amount (with dot and two decimal places)">
+                <div class="input-group-append">
+                  <span class="input-group-text">تومان</span>
+
+                </div>
+              </div>
+              <small id="textHelp" class="form-text text-muted">12 رقم بدون فاصله <span class="fa fa-long-arrow-left"></span>
+                1234567890 <span class="fa fa-exclamation-circle"></span> </small>
+            </div>
+          </div>
+          <div class="col-sm-12">
+            <div class="form-group">
+              <div class="input-group">
+                <input type="text" id="Fforoosh" class="form-control" autocomplete="off" maxlength="15" placeholder="ودیعه"
+                  required aria-label="Dollar amount (with dot and two decimal places)">
+                <div class="input-group-append">
+                  <span class="input-group-text">تومان</span>
+
+                </div>
+              </div>
+              <small id="textHelp" class="form-text text-muted">12 رقم بدون فاصله <span class="fa fa-long-arrow-left"></span>
+                1234567890 <span class="fa fa-exclamation-circle"></span> </small>
+            </div>
+          </div>
+          <div class="col-sm-12">
+            <div class="form-group">
+              <div class="input-group">
+                <input type="text" id="Fforoosh" class="form-control" autocomplete="off" maxlength="15" placeholder="قیمت"
+                  required aria-label="Dollar amount (with dot and two decimal places)">
+                <div class="input-group-append">
+                  <span class="input-group-text">تومان</span>
+
+                </div>
+              </div>
+              <small id="textHelp" class="form-text text-muted">12 رقم بدون فاصله <span class="fa fa-long-arrow-left"></span>
+                1234567890 <span class="fa fa-exclamation-circle"></span> </small>
+            </div>
+          </div>
+
+          <div class="col-sm-12">
+            <div class="form-group">
+              <ul>
+                <li>
+                  <label class="title">پارکینگ</label>
+
+                  <label class="custom">دارد
+                    <input type="radio" name="parking" checked>
+                    <span class="checkmark"></span>
+                  </label><label class="custom">ندارد
+                    <input type="radio" name="parking">
+                    <span class="checkmark"></span>
+                  </label>
+                </li>
+
+                <li>
+                  <label class="title">انباری</label>
+                  <label class="custom">دارد
+                    <input type="radio" name="anbari" checked>
+                    <span class="checkmark"></span>
+                  </label><label class="custom">ندارد
+                    <input type="radio" name="anbari">
+                    <span class="checkmark"></span>
+                  </label>
+                </li>
+
+                <li>
+                  <label class="title">آسانسور</label>
+
+                  <label class="custom">دارد
+                    <input type="radio" name="asansor" checked>
+                    <span class="checkmark"></span>
+                  </label><label class="custom">ندارد
+                    <input type="radio" name="asansor">
+                    <span class="checkmark"></span>
+                  </label>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-12">
+            <div class="form-group">
+              <input id="newUser-tel" class="form-control ltr-write format-number input-phone" name="phoneNum"
+                autocomplete="off" placeholder="تلفن همراه" required>
+              <small id="textHelp" class="form-text text-muted">نمونه <span class="fa fa-long-arrow-left"></span>
+                09xx xxx xxxx <span class="fa fa-exclamation-circle"></span> </small>
+
+            </div>
+          </div>
+          <div class="col-sm-12">
+            <div class="form-group">
+              <textarea class="form-control" rows="5" name="limitedtextarea" onKeyDown="limitText(this.form.limitedtextarea,this.form.countdown,25);"
+                onKeyUp="limitText(this.form.limitedtextarea,this.form.countdown,25);"></textarea>
+              <small id="textareaHelp" class="form-text text-muted"><span id="limitCount">0</span>/<span>25</span></small>
+            </div>
+          </div>
+
+
+
+
+
+
+          <div class="col-sm-12">
+            <div class="form-group">
+              <div class="photo_submit-container">
+               
+                 
+                 
+                    <label class="photo_submit uploader1" >
+                      <input class="photo_submit-input js-photo_submit-input" type="file" onchange="readURL(this , 'uploader1');" accept="image/*">
+                      <span class="photo_submit-plus"></span>
+                      <span class="photo_submit-uploadLabel">افزودن عکس</span>
+                      <span class="photo_submit-delete"></span>
+                    </label>
+                 
+                    <label class="photo_submit uploader2">
+                      <input class="photo_submit-input js-photo_submit-input" type="file" onchange="readURL(this ,'uploader2');" accept="image/*">
+                      <span class="photo_submit-plus"></span>
+                      <span class="photo_submit-uploadLabel">افزودن عکس</span>
+                      <span class="photo_submit-delete"></span>
+                    </label>
+                 
+               
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12">
+          <div class="form-group text-center">
+           
+              <button type="submit" class="btn btn-outline-primary">ثبت آگهی</button>
+           
+          </div>
+          </div>
+
+        </div>
+      </form>
+    </div>
+
+<div class="footDesc">
+    <div class="form-desc">
+        <p>اگر ملک فقط ودیعه دارد، مقدار 0 را برای اجاره وارد کنید. <br />اگر ملک فقط اجاره دارد، مقدار 0 را برای ودیعه وارد کنید.</p>
+      </div>
+</div>
+
+    
+    <footer>
+      <ul>
+        <li><a href="#">اخبار</a> </li>
+        <li><a href="#">جستجو</a> </li>
+        <li><a href="#">آخرین آگهی‌ها</a> </li>
+        <li><a href="#">تماس با ما</a> </li>
+      </ul>
+      <div class="copyright">
+        کلیه حقوق مادی و معنوی این سایت برای Tanoor محفوظ است | <a href="#">شرایط استفاده</a>
+      </div>
+     
+    </footer>
+  </div>
+
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="node_modules/rtl-bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function limitText(limitField, limitCount, limitNum) {
+      if (limitField.value.length > limitNum) {
+        limitField.value = limitField.value.substring(0, limitNum);
+      } else {
+        document.getElementById("limitCount").innerHTML = limitField.value.length;
+      }
+    }
+
+    function readURL(input , id) {
+      //$(input).parent(".photo_submit").addClass("test");
+      
+        if (input.files && input.files[0]) {
+            var reader = new FileReader();
+            
+            reader.onload = function (e) {
+                $("." + id).attr('style','background-image: url(' + e.target.result +')');
+            }
+            
+            reader.readAsDataURL(input.files[0]);
+        }
+    }
+  </script>
+</body>
+
+</html>
