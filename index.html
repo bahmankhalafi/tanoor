@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="node_modules/rtl-bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
 
+  <link rel="stylesheet" href="css/modal.css">
   <link rel="stylesheet" href="css/style.css">
 
 </head>
@@ -34,36 +35,39 @@
     <div id="search" class="search">
 
       <div class="row">
+
         <div class="col col-md-3 col-sm-6">
-          <button class="custom-button">اجاره ملک</button>
+          <button class="custom-button">اجاره ملک
+            <span></span>
+
+          </button>
         </div>
         <div class="col col-md-3 col-sm-6">
-          <button class="custom-button">فروش ملک</button>
+          <button class="custom-button">فروش ملک<span></span></button>
         </div>
       </div>
       <div class="row">
         <div class="col col-md-3 col-sm-6">
-          <button class="custom-button">خانه</button>
+          <button class="custom-button">خانه<span></span></button>
         </div>
         <div class="col col-md-3 col-sm-6">
-          <button class="custom-button">مغازه</button>
+          <button class="custom-button">مغازه<span></span></button>
         </div>
         <div class="col col-md-3 col-sm-6">
-          <button class="custom-button">دفترکار</button>
+          <button class="custom-button">دفترکار<span></span></button>
         </div>
         <div class="col col-md-2 col-sm-6">
-          <button class="custom-button">زمین</button>
+          <button class="custom-button">زمین<span></span></button>
         </div>
       </div>
       <div class="row">
         <div class="col col-md-3 col-sm-6">
-          <button class="custom-button btnCity" name="saleCity" data-toggle="modal" data-target=".changeCity">تغییر شهر
-            <i class="fa fa-angle-down fa-lg"></i></button>
+          <button data-modal="#cityModal" class="modal__trigger custom-button">تغییر شهر <i class="fa fa-angle-down fa-lg"></i></button>
+
 
         </div>
         <div class="col col-md-3 col-sm-6">
-          <button class="custom-button btnArea" name="saleCity" data-toggle="modal" data-target=".changeArea">تغییر
-            منطقه <i class="fa fa-angle-down fa-lg"></i></button>
+          <button data-modal="#areaModal" class="modal__trigger custom-button">تغییر منطقه<i class="fa fa-angle-down fa-lg"></i></button>
 
         </div>
       </div>
@@ -82,7 +86,7 @@
               <img src="images/home.jpg" alt="home" />
               <div class="overlay">
                 <span class="search-plus">
-                  <i class="fa fa-search-plus"></i>
+                  <img src="images/zoom-in.png" />
                 </span>
 
               </div>
@@ -90,7 +94,7 @@
                 <div class="all-images">
                   <img src="images/1.jpg">
                   <img src="images/2.jpg">
-                  <img src="images/3.jpg">
+
                 </div>
               </div>
             </div>
@@ -106,14 +110,18 @@
 
           <button class="btn-detail custom-button">جزئیات</button>
           <div class="pdesc">
-            <button class="close"><i class="fa fa-times"></i></button>
+              <button class="close">
+                  <svg class="" viewBox="0 0 24 24">
+                    <path d="M19 6.41l-1.41-1.41-5.59 5.59-5.59-5.59-1.41 1.41 5.59 5.59-5.59 5.59 1.41 1.41 5.59-5.59 5.59 5.59 1.41-1.41-5.59-5.59z" />
+                    <path d="M0 0h24v24h-24z" fill="none" /></svg>
+              </button>
             <p>
-              جزئیات کامل سیستم
+ تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد 
             </p>
           </div>
         </div>
       </div>
-
+     
       <div class="col col-md-6 col-sm-12">
         <div class="pdetail">
           <div class="pInfo">
@@ -126,7 +134,7 @@
               <img src="images/home.jpg" alt="home" />
               <div class="overlay">
                 <span class="search-plus">
-                  <i class="fa fa-search-plus"></i>
+                  <img src="images/zoom-in.png" />
                 </span>
 
               </div>
@@ -134,7 +142,7 @@
                 <div class="all-images">
                   <img src="images/1.jpg">
                   <img src="images/2.jpg">
-                  <img src="images/3.jpg">
+
                 </div>
               </div>
             </div>
@@ -150,13 +158,117 @@
 
           <button class="btn-detail custom-button">جزئیات</button>
           <div class="pdesc">
-            <button class="close"><i class="fa fa-times"></i></button>
+              <button class="close">
+                  <svg class="" viewBox="0 0 24 24">
+                    <path d="M19 6.41l-1.41-1.41-5.59 5.59-5.59-5.59-1.41 1.41 5.59 5.59-5.59 5.59 1.41 1.41 5.59-5.59 5.59 5.59 1.41-1.41-5.59-5.59z" />
+                    <path d="M0 0h24v24h-24z" fill="none" /></svg>
+              </button>
             <p>
-              جزئیات کامل سیستم
+ تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد 
             </p>
           </div>
         </div>
       </div>
+     
+      <div class="col col-md-6 col-sm-12">
+        <div class="pdetail">
+          <div class="pInfo">
+            <p class="text-right">
+              <span><i class="fa fa-car" data-toggle="tooltip" data-original-title="پارکنیگ"></i></span>
+              <span><i class="fa fa-columns" data-toggle="tooltip" data-original-title="آسانسور"></i></span>
+              <span><i class="fa fa-home" data-toggle="tooltip" data-original-title="انباری"></i></span>
+            </p>
+            <div class="pimage">
+              <img src="images/home.jpg" alt="home" />
+              <div class="overlay">
+                <span class="search-plus">
+                  <img src="images/zoom-in.png" />
+                </span>
+
+              </div>
+              <div class="container-images hidden">
+                <div class="all-images">
+                  <img src="images/1.jpg">
+                  <img src="images/2.jpg">
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <p><span class="price">۱۰۰,۰۰۰</span> <span class="ptext">متری</span> </p>
+          <p> <span class="price">۸۰۰,۰۰۰</span> <span class="ptext">اجاره</span></p>
+          <p> <span class="price">۳۰۰,۰۰۰,۰۰۰</span> <span class="ptext">ودیعه</span></p>
+          <p class="mobileN"><span class="mobileNumber"> ۰۹۳۶ </span><span class="xNumbers">xxx xxxx</span>
+            <span class="dNumbers">۲۱۰ ۵۰۵۵</span></p>
+
+
+          <button class="btn-detail custom-button">جزئیات</button>
+          <div class="pdesc">
+              <button class="close">
+                  <svg class="" viewBox="0 0 24 24">
+                    <path d="M19 6.41l-1.41-1.41-5.59 5.59-5.59-5.59-1.41 1.41 5.59 5.59-5.59 5.59 1.41 1.41 5.59-5.59 5.59 5.59 1.41-1.41-5.59-5.59z" />
+                    <path d="M0 0h24v24h-24z" fill="none" /></svg>
+              </button>
+            <p>
+ تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد 
+            </p>
+          </div>
+        </div>
+      </div>
+     
+      <div class="col col-md-6 col-sm-12">
+        <div class="pdetail">
+          <div class="pInfo">
+            <p class="text-right">
+              <span><i class="fa fa-car" data-toggle="tooltip" data-original-title="پارکنیگ"></i></span>
+              <span><i class="fa fa-columns" data-toggle="tooltip" data-original-title="آسانسور"></i></span>
+              <span><i class="fa fa-home" data-toggle="tooltip" data-original-title="انباری"></i></span>
+            </p>
+            <div class="pimage">
+              <img src="images/home.jpg" alt="home" />
+              <div class="overlay">
+                <span class="search-plus">
+                  <img src="images/zoom-in.png" />
+                </span>
+
+              </div>
+              <div class="container-images hidden">
+                <div class="all-images">
+                  <img src="images/1.jpg">
+                  <img src="images/2.jpg">
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <p><span class="price">۱۰۰,۰۰۰</span> <span class="ptext">متری</span> </p>
+          <p> <span class="price">۸۰۰,۰۰۰</span> <span class="ptext">اجاره</span></p>
+          <p> <span class="price">۳۰۰,۰۰۰,۰۰۰</span> <span class="ptext">ودیعه</span></p>
+          <p class="mobileN"><span class="mobileNumber"> ۰۹۳۶ </span><span class="xNumbers">xxx xxxx</span>
+            <span class="dNumbers">۲۱۰ ۵۰۵۵</span></p>
+
+
+          <button class="btn-detail custom-button">جزئیات</button>
+          <div class="pdesc">
+              <button class="close">
+                  <svg class="" viewBox="0 0 24 24">
+                    <path d="M19 6.41l-1.41-1.41-5.59 5.59-5.59-5.59-1.41 1.41 5.59 5.59-5.59 5.59 1.41 1.41 5.59-5.59 5.59 5.59 1.41-1.41-5.59-5.59z" />
+                    <path d="M0 0h24v24h-24z" fill="none" /></svg>
+              </button>
+            <p>
+ تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان را می طلبد 
+            </p>
+          </div>
+        </div>
+      </div>
+     
+    
+
+
 
     </div>
     <footer>
@@ -173,133 +285,139 @@
   </div>
 
   <!-- City modal -->
+  <div id="cityModal" class="modal modal__bg" role="dialog" aria-hidden="true">
+    <div class="modal__dialog">
+      <div class="modal__content">
+        <h3>تغییر شهر</h1>
+          <div>
 
-  <div class="modal fade changeCity" tabindex="-1" role="dialog">
-    <div class="modal-dialog modal-lg" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">تغییر شهر</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
+            <ul class="city">
+              <li>استانهای شمالی</li>
+              <li><button>آذربایجان غربی<span></span></button></li>
+              <li><button>اردبیل<span></span></button></li>
+              <li><button>البرز<span></span></button></li>
+              <li><button>ایلام<span></span></button></li>
+              <li><button>بوشهر<span></span></button></li>
+              <li><button>چهارمحال و بختیاری<span></span></button></li>
+              <li><button>گیلان<span></span></button></li>
+              <li><button>مازندران<span></span></button></li>
+              <li><button>گرگان<span></span></button></li>
+            </ul>
+            <ul class="city">
+              <li>استانهای غربی</li>
+              <li><button>خوزستان<span></span></button></li>
+              <li><button>زنجان<span></span></button></li>
+              <li><button>سمنان<span></span></button></li>
+              <li><button>سیستان و بلوچستان<span></span></button></li>
+              <li><button>فارس<span></span></button></li>
+              <li><button>قزوین<span></span></button></li>
+            </ul>
+            <ul class="city">
+              <li>استان های شرقی</li>
 
-          <ul class="city">
-            <li>استانهای شمالی</li>
-            <li><button>آذربایجان غربی</button></li>
-            <li><button>اردبیل</button></li>
-            <li><button>البرز</button></li>
-            <li><button>ایلام</button></li>
-            <li><button>بوشهر</button></li>
-            <li><button>چهارمحال و بختیاری</button></li>
-            <li><button>گیلان</button></li>
-            <li><button>مازندران</button></li>
-            <li><button>گرگان</button></li>
-          </ul>
-          <ul class="city">
-            <li>استانهای غربی</li>
-            <li><button>خوزستان</button></li>
-            <li><button>زنجان</button></li>
-            <li><button>سمنان</button></li>
-            <li><button>سیستان و بلوچستان</button></li>
-            <li><button>فارس</button></li>
-            <li><button>قزوین</button></li>
-          </ul>
-          <ul class="city">
-            <li>استان های شرقی</li>
-
-            <li>
-              <button>قم</button>
-            </li>
-            <li>
-              <button>کردستان</button>
-            </li>
-            <li>
-              <button>کرمان</button>
-            </li>
-            <li>
-              <button>کرمانشاه</button>
-            </li>
-            <li>
-              <button>کهگیلویه و بویراحمد</button>
-            </li>
-            <li>
-              <button>گلستان</button>
-            </li>
-          </ul>
-          <ul class="city">
-            <li>استان های جنوبی</li>
+              <li>
+                <button>قم<span></span></button>
+              </li>
+              <li>
+                <button>کردستان<span></span></button>
+              </li>
+              <li>
+                <button>کرمان<span></span></button>
+              </li>
+              <li>
+                <button>کرمانشاه<span></span></button>
+              </li>
+              <li>
+                <button>کهگیلویه و بویراحمد<span></span></button>
+              </li>
+              <li>
+                <button>گلستان<span></span></button>
+              </li>
+            </ul>
+            <ul class="city">
+              <li>استان های جنوبی</li>
 
 
 
-            <li>
-              <button>گیلان</button>
-            </li>
-            <li>
-              <button>لرستان</button>
-            </li>
-            <li>
-              <button>مازندران</button>
-            </li>
-            <li>
-              <button>مرکزی</button>
-            </li>
-            <li>
-              <button>هرمزگان</button>
-            </li>
-            <li>
-              <button>همدان</button>
-            </li>
-            <li>
-              <button>یزد</button>
-            </li>
-          </ul>
+              <li>
+                <button>گیلان<span></span></button>
+              </li>
+              <li>
+                <button>لرستان<span></span></button>
+              </li>
+              <li>
+                <button>مازندران<span></span></button>
+              </li>
+              <li>
+                <button>مرکزی<span></span></button>
+              </li>
+              <li>
+                <button>هرمزگان<span></span></button>
+              </li>
+              <li>
+                <button>همدان<span></span></button>
+              </li>
+              <li>
+                <button>یزد<span></span></button>
+              </li>
+            </ul>
 
-        </div>
+          </div>
+
+          <!-- modal close button -->
+          <a href="" class="modal__close demo-close">
+            <svg class="" viewBox="0 0 24 24">
+              <path d="M19 6.41l-1.41-1.41-5.59 5.59-5.59-5.59-1.41 1.41 5.59 5.59-5.59 5.59 1.41 1.41 5.59-5.59 5.59 5.59 1.41-1.41-5.59-5.59z" />
+              <path d="M0 0h24v24h-24z" fill="none" /></svg>
+          </a>
       </div>
     </div>
   </div>
+
   <!-- Area modal -->
+  <!-- The Modal -->
+  <div id="areaModal" class="modal modal__bg" role="dialog" aria-hidden="true">
+    <div class="modal__dialog">
+      <div class="modal__content">
+        <h3>تغییر منطقه</h1>
+          <div>
+
+            <ul class="city">
+              <li>تهران</li>
+              <li><button>ونک<span></span></button></li>
+              <li><button>یوسف آباد<span></span></button></li>
+              <li><button>شمیران<span></span></button></li>
+              <li><button>فرحزاد<span></span></button></li>
+              <li><button>فرحزاد<span></span></button></li>
+              <li><button>گیشا<span></span></button></li>
+              <li><button>گیشا<span></span></button></li>
+              <li><button>منیریه<span></span></button></li>
+              <li><button>درکه<span></span></button></li>
+              <li><button>قلهک<span></span></button></li>
+
+            </ul>
+
+          </div>
+
+          <!-- modal close button -->
+          <a href="" class="modal__close demo-close">
+            <svg class="" viewBox="0 0 24 24">
+              <path d="M19 6.41l-1.41-1.41-5.59 5.59-5.59-5.59-1.41 1.41 5.59 5.59-5.59 5.59 1.41 1.41 5.59-5.59 5.59 5.59 1.41-1.41-5.59-5.59z" />
+              <path d="M0 0h24v24h-24z" fill="none" /></svg>
+          </a>
+      </div>
+    </div>
+  </div>
   <!-- The Modal -->
   <div id="myModal" class="image-modal">
     <span class="pclose">&times;</span>
     <div id="image-modal-body"></div>
     <div id="caption"></div>
   </div>
-  <div class="modal fade changeArea" tabindex="-1" role="dialog">
-    <div class="modal-dialog modal-lg" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">تغییر منطقه</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body">
-
-          <ul class="city">
-            <li>تهران</li>
-            <li><button>ونک</button></li>
-            <li><button>یوسف آباد</button></li>
-            <li><button>شمیران</button></li>
-            <li><button>فرحزاد</button></li>
-            <li><button>فرحزاد</button></li>
-            <li><button>گیشا</button></li>
-            <li><button>گیشا</button></li>
-            <li><button>منیریه</button></li>
-            <li><button>درکه</button></li>
-            <li><button>قلهک</button></li>
-
-          </ul>
-
-        </div>
-      </div>
-    </div>
-  </div>
 
   <script src="node_modules/jquery/dist/jquery.min.js"></script>
   <script src="node_modules/rtl-bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/modal.js"></script>
   <script>
     $(document).ready(function () {
       $(".mobileN").click(function () {
@@ -326,7 +444,10 @@
         $("#image-modal-body").html($(".container-images").html());
         $(".image-modal").fadeIn("slow");
       });
-      $(".image-modal .pclose").click(function () {
+      $(".pclose").click(function () {
+        $(".image-modal").fadeOut("slow");
+      });
+      $(".image-modal").click(function () {
         $(".image-modal").fadeOut("slow");
       });
 

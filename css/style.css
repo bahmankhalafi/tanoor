@@ -2,7 +2,8 @@
 body {
 	font-family: "IRANSans" !important;
 	font-size: 14px;
-	margin: 0;
+  margin: 0;
+  background: #FBFBFB;
 }
 
 h1, h2, h3, h4, h5, h6, input, textarea {
@@ -153,41 +154,51 @@ ul.city li {
 }
 
 ul.city li button, .custom-button {
-	cursor: pointer;
-	width: 100%;
-	margin-bottom: 20px;
-	height: 38px;
-	background-color: white;
-	border: 0;
-	border-bottom: 3px solid transparent;
-	transition: all 0.5s;
-	color: #999;
+  cursor: pointer;
+ 
+  background-color: #FBFBFB;
+  border: 0;
+  border-bottom: 3px solid transparent;
+  transition: all 0.5s;
+  color: #999;
+  bottom: 0;
+  left: 0;
 }
 
-.custom-button {
-	border-bottom: 3px solid #999;
+.custom-button span,ul.city li button span{
+  display: block;
+  border-bottom: 3px solid #999;
+  padding-top:5px;
+  margin:0 auto;
+  width: 30px;
+}
+.custom-button:hover span,ul.city li button:hover span{
+  border-bottom: 3px solid #000;
+  
 }
 
 ul.city li button:hover, .custom-button:hover {
-	border-bottom: 3px solid #000;
-	color: #000;
+	/* border-bottom: 3px solid #000; */
+  color: #000;
+  font-weight: 600;
 }
 
 .pdetail {
 	background-color: #FBFBFB;
-	border: 1px solid #d4d2d2;
+	
 	margin-top: 20px;
-	padding: 20px;
-	margin: 30px;
+	
 	height: 250px;
+  position: relative;margin:0 100px;
 }
+
 .pInfo {float:left;width:150px;}
-.pInfo img{float: left;width:150px;}
+
 .pInfo {float: left;}
-.pdetail {position: relative;padding:10px 20px;}
-.price , .mobileN{font-size:20px ;font-weight: 600;}
+.price {font-weight: 600}
+.price , .mobileN{font-size:16px;}
 .ptext{font-size: 14px;}
-.pdetail {padding-top: 15px;}
+
 
 .mobileN{direction: ltr !important;color: #999}
 .mobileN:hover{color: #000;}
@@ -197,13 +208,16 @@ ul.city li button:hover, .custom-button:hover {
 .pdesc{display:none;position: absolute;top:0;left: 0;width: 100%;height: 100%;z-index: 100;	background-color:#FBFBFB }
 
 .pdesc .close,.pdesc p{padding:10px;}
-.pdesc p{text-align: right;}
-.btn-detail{width:100px;float:left;}
-.pimage{position: relative;width:150px;min-height: 96px;}
-
+.pdesc p{    text-align: justify;
+  padding: 15px 25px;
+}
+.btn-detail{position: absolute;bottom: 0;left:0;margin:30px ;}
+.pimage{position: relative;width:135px;height: 130px;}
+.pimage > img{width:135px;height: 130px;}
+.search-plus > img{width:50px;}
 .hidden{display: none;}
 
-.all-images img{padding:5px 0;background-color:#fff;  display: block;
+.all-images img{padding-bottom:20px;background-color:#fff;  display: block;
     clear: both;
     text-align: center;width: 500px;margin:0 auto;}
 .image-modal-body{text-align: center;}
@@ -211,7 +225,7 @@ ul.city li button:hover, .custom-button:hover {
 	
 	opacity: 0.8;
   }
-  .pimage:hover .search-plus{opacity: 1;}
+  .pimage:hover .search-plus{ opacity: 1;top:50%;transition: .5s ease;}
   .overlay {
 	position: absolute;
 	top: 0;
@@ -221,15 +235,33 @@ ul.city li button:hover, .custom-button:hover {
 	height: 100%;
 	width: 100%;
 	opacity: 0;
-	transition: .3s ease;
-	background-color: #999;
+  transition: .5s ease;
+	background-color: #fff;
   }
+  .pdesc .close{
+    top: auto;
+    background: #998;
+    width: 50px;
+    display: block;
+    position: absolute;
+    left: 0;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    margin: 10px 30px;
+    bottom: 0;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .5;
+    height: 50px;
+    border-radius: 50px;
+}
 .search-plus {
-	opacity: 1;
+	opacity: 0;
 	color: white;
 	font-size: 20px;
 	position: absolute;
-	top: 50%;
+	top: 0;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	-ms-transform: translate(-50%, -50%);
@@ -456,6 +488,8 @@ form ul li label.title{min-width: 100px;}
 .footDesc{text-align: left;}
 .form-desc{border:1px solid #999;padding:20px;border-radius: 10px;display: inline-block;}
 .form-desc p{padding: 0;margin: 0;}
+
+
   /* 100% Image Width on Smaller Screens */
   @media only screen and (max-width: 700px){
 	.modal-content {
@@ -466,7 +500,8 @@ form ul li label.title{min-width: 100px;}
 @media (max-width: 575.98px) { 
 	.pdetail{
 		margin: 30px 0;}
-		.btnArea , .btnCity{ font-size: 13px}
+    .btnArea , .btnCity{ font-size: 13px}
+    .pdetail {padding-top: 15px;}
  }
 
 /* // Small devices (landscape phones, less than 768px) */
