@@ -1,7 +1,6 @@
 .modal {
   will-change: visibility, opacity;
   display: flex;
-  align-items: center;
   justify-content: center;
   position: fixed;
   top: 0;
@@ -14,6 +13,7 @@
   visibility: hidden;
   opacity: 0;
   transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+  background-color: #FBFBFB;
   
 }
 .modal--active {
@@ -27,7 +27,7 @@
   background: transparent;
 }
 .modal__dialog {
-  max-width: 600px;
+  max-width: 668px;
   padding: 1.2rem;
 }
 .modal__content {
