@@ -10,6 +10,8 @@
   <link rel="stylesheet" href="node_modules/rtl-bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
 
+  <link rel="stylesheet" href="css/bootstrapValidator.min.css">
+
   <link rel="stylesheet" href="css/style.css">
 
 </head>
@@ -36,10 +38,10 @@
       <form id="newform" method="post" class="form-horizontal" role="form">
         <div class="row">
           <div class="col col-md-6  col-sm-6 col-xs-12 padb40">
-            <button class="custom-button" type="button">آگهی اجاره <span></span></button>
+            <button id="rentBtn" class="custom-button active" type="button">آگهی اجاره <span></span></button>
           </div>
           <div class="col col-md-6 col-sm-6">
-            <button class="custom-button" type="button">آگهی فروش <span></span></button>
+            <button id="saleBtn" class="custom-button" type="button">آگهی فروش <span></span></button>
           </div>
 
           <div class="col-sm-12">
@@ -72,48 +74,48 @@
           <div class="col-sm-12">
             <div class="form-group">
 
-              <input type="text" id="Fmetraj" class="form-control ltr" autocomplete="off" maxlength="15" placeholder="متراژ"
-                required aria-label="Dollar amount (with dot and two decimal places)">
+              <input type="number" name="area" class="form-control ltr rightplaceholder" autocomplete="off" maxlength="12"
+                placeholder="متراژ" required>
 
               <span class="afterinput">متر</span>
-              <small id="textHelp" class="form-text text-muted">۱۲ رقم بدون فاصله <span class="fa fa-long-arrow-left"></span>
+              <small id="textHelp" class="form-text text-muted text-left">۱۲ رقم بدون فاصله <span class="fa fa-long-arrow-left"></span>
                 ۱۲۳۴۵۶۷۸۹۰ <span class="fa fa-exclamation-circle"></span> </small>
             </div>
           </div>
-          <div class="col-sm-12">
+          <div class="col-sm-12 forrent">
             <div class="form-group">
 
-              <input type="text" id="Fforoosh" class="form-control  ltr" autocomplete="off" maxlength="15" placeholder="اجاره"
-                required aria-label="Dollar amount (with dot and two decimal places)">
+              <input type="text" name="rent" class="form-control ltr currency" autocomplete="off" maxlength="12"
+                placeholder="اجاره" required aria-label="Dollar amount (with dot and two decimal places)">
 
               <span class="afterinput">تومان</span>
-              <small id="textHelp" class="form-text text-muted">۱۲ رقم بدون فاصله <span class="fa fa-long-arrow-left"></span>
+              <small id="textHelp" class="form-text text-muted text-left">۱۲ رقم بدون فاصله <span class="fa fa-long-arrow-left"></span>
                 ۱۲۳۴۵۶۷۸۹۰ <span class="fa fa-exclamation-circle"></span> </small>
             </div>
           </div>
-          <div class="col-sm-12">
+          <div class="col-sm-12 forrent">
             <div class="form-group">
 
-              <input type="text" id="Fforoosh" class="form-control ltr" autocomplete="off" maxlength="15" placeholder="ودیعه"
-                required aria-label="Dollar amount (with dot and two decimal places)">
+              <input type="text" name="deposit" class="form-control ltr currency" autocomplete="off" maxlength="12"
+                placeholder="ودیعه" required aria-label="Dollar amount (with dot and two decimal places)">
 
               <span class="afterinput">تومان</span>
-              <small id="textHelp" class="form-text text-muted">۱۲ رقم بدون فاصله <span class="fa fa-long-arrow-left"></span>
+              <small id="textHelp" class="form-text text-muted text-left">۱۲ رقم بدون فاصله <span class="fa fa-long-arrow-left"></span>
                 ۱۲۳۴۵۶۷۸۹۰ <span class="fa fa-exclamation-circle"></span> </small>
             </div>
           </div>
-          <div class="col-sm-12">
+          <div class="col-sm-12 forsale hidden">
             <div class="form-group">
 
-              <input type="text" id="Fforoosh" class="form-control ltr" autocomplete="off" maxlength="15" placeholder="قیمت"
-                required aria-label="Dollar amount (with dot and two decimal places)">
+              <input type="text" name="price" class="form-control ltr currency " autocomplete="off" maxlength="12"
+                placeholder="قیمت" required aria-label="Dollar amount (with dot and two decimal places)">
 
               <span class="afterinput">تومان</span>
-              <small id="textHelp" class="form-text text-muted">۱۲ رقم بدون فاصله <span class="fa fa-long-arrow-left"></span>
+              <small id="textHelp" class="form-text text-muted text-left">۱۲ رقم بدون فاصله <span class="fa fa-long-arrow-left"></span>
                 ۱۲۳۴۵۶۷۸۹۰ <span class="fa fa-exclamation-circle"></span> </small>
             </div>
           </div>
-          
+
 
           <div class="col-sm-12">
             <div class="form-group">
@@ -133,24 +135,24 @@
                 <li>
                   <label class="title">انباری</label>
                   <label class="custom">دارد
-                      <input type="radio" name="anbari">
-                      <span class="checkmark"></span>
-                    </label>
-                    <label class="custom">ندارد<input type="radio" name="anbari" checked><span class="checkmark"></span>
-                      <span class="checkmark"></span>
-                    </label>
+                    <input type="radio" name="anbari">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="custom">ندارد<input type="radio" name="anbari" checked><span class="checkmark"></span>
+                    <span class="checkmark"></span>
+                  </label>
                 </li>
 
                 <li>
                   <label class="title">آسانسور</label>
 
                   <label class="custom">دارد
-                      <input type="radio" name="asansor">
-                      <span class="checkmark"></span>
-                    </label>
-                    <label class="custom">ندارد<input type="radio" name="asansor" checked><span class="checkmark"></span>
-                      <span class="checkmark"></span>
-                    </label>
+                    <input type="radio" name="asansor">
+                    <span class="checkmark"></span>
+                  </label>
+                  <label class="custom">ندارد<input type="radio" name="asansor" checked><span class="checkmark"></span>
+                    <span class="checkmark"></span>
+                  </label>
                 </li>
 
               </ul>
@@ -158,9 +160,9 @@
           </div>
           <div class="col-sm-12">
             <div class="form-group">
-              <input id="newUser-tel" class="form-control ltr" name="phoneNum"
-                autocomplete="off" placeholder="تلفن همراه" required>
-              <small id="textHelp" class="form-text text-muted">نمونه <span class="fa fa-long-arrow-left"></span>
+              <input type="text" class="form-control ltr rightplaceholder" name="phone" autocomplete="off" placeholder="تلفن همراه"
+                required>
+              <small id="textHelp" class="form-text text-muted text-left">نمونه <span class="fa fa-long-arrow-left"></span>
                 09xx xxx xxxx <span class="fa fa-exclamation-circle"></span> </small>
 
             </div>
@@ -169,7 +171,7 @@
             <div class="form-group">
               <textarea class="form-control" rows="5" name="limitedtextarea" onKeyDown="limitText(this.form.limitedtextarea,this.form.countdown,25);"
                 onKeyUp="limitText(this.form.limitedtextarea,this.form.countdown,25);"></textarea>
-              <small id="textareaHelp" class="form-text text-muted"><span id="limitCount">0</span>/<span>25</span></small>
+              <small id="textareaHelp" class="form-text text-muted text-left"><span id="limitCount">0</span>/<span>25</span></small>
             </div>
           </div>
 
@@ -240,6 +242,9 @@
 
   <script src="node_modules/jquery/dist/jquery.min.js"></script>
   <script src="node_modules/rtl-bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/bootstrapValidator.js"></script>
+  <script src="js/bootstrapValidator-fa-IR.js"></script>
+
   <script>
     function limitText(limitField, limitCount, limitNum) {
       if (limitField.value.length > limitNum) {
@@ -262,6 +267,119 @@
         reader.readAsDataURL(input.files[0]);
       }
     }
+
+    $(document).ready(function () {
+      $('#newform').bootstrapValidator({
+        message: 'This value is not valid',
+        fields: {
+          area: {
+            message: 'این مقدار صحیح نیست!',
+            validators: {
+              notEmpty: {
+                message: 'این فیلد نمی تواند خالی باشد!',
+              }
+            },
+          },
+          rent: {
+            message: 'این مقدار صحیح نیست!',
+            validators: {
+              notEmpty: {
+                message: 'این فیلد نمی تواند خالی باشد!'
+              }
+            }
+          },
+          deposit: {
+            message: 'این مقدار صحیح نیست!',
+            validators: {
+              notEmpty: {
+                message: 'این فیلد نمی تواند خالی باشد!'
+              }
+            }
+          },
+          price: {
+            message: 'این مقدار صحیح نیست!',
+            validators: {
+              notEmpty: {
+                message: 'این فیلد نمی تواند خالی باشد!'
+              }
+            }
+          },
+          phone: {
+            message: 'این مقدار صحیح نیست!',
+            validators: {
+              notEmpty: {
+                message: 'این فیلد نمی تواند خالی باشد!'
+              },
+              phone: {
+                country: 'IR',
+                message: 'فرمت شماره تلفن وارد شده صحیح نمی باشد!'
+              }
+            }
+          },
+          estate: {
+            message: 'این مقدار صحیح نیست!',
+            validators: {
+              notEmpty: {
+                message: 'این فیلد نمی تواند خالی باشد!'
+              }
+            }
+          },
+          country: {
+            message: 'این مقدار صحیح نیست!',
+            validators: {
+              notEmpty: {
+                message: 'این فیلد نمی تواند خالی باشد!'
+              }
+            }
+          }
+        }
+      });
+
+    });
+
+    $(".currency").on("keyup", function (event) {
+
+
+      // When user select text in the document, also abort.
+      var selection = window.getSelection().toString();
+      if (selection !== '') {
+        return;
+      }
+
+      // When the arrow keys are pressed, abort.
+      if ($.inArray(event.keyCode, [38, 40, 37, 39]) !== -1) {
+        return;
+      }
+
+
+      var $this = $(this);
+
+      // Get the value.
+      var input = $this.val();
+
+      var input = input.replace(/[\D\s\._\-]+/g, "");
+      input = input ? parseInt(input, 10) : 0;
+
+      $this.val(function () {
+        return (input === 0) ? "" : input.toLocaleString("en-US");
+      });
+    });
+    $(".custom-button").click(function () {
+      $(".active").removeClass("active");
+      $(this).addClass("active");
+    });
+
+    $("#saleBtn").click(function () {
+      $(".forrent").slideUp();
+      $(".forsale").slideDown();
+    });
+    $("#rentBtn").click(function () {
+      $(".forsale").slideUp();
+      $(".forrent").slideDown();
+
+   
+    });
+
   </script>
 </body>
 
