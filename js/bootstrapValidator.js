@@ -5521,7 +5521,7 @@ if (typeof jQuery === 'undefined') {
                 case 'IR':
                     // http://regex101.com/r/eM2yY0/6
                     value   = $.trim(value);
-                    isValid = (/^09[0-9]{2} [0-9]{3} [0-9]{4}$/).test(value);
+                    isValid = (/^09[0-9]{2}(\s?)[0-9]{3}(\s?)[0-9]{4}$/).test(value);
                     break;
 
                 case 'US':

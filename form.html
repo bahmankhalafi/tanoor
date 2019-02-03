@@ -74,8 +74,8 @@
           <div class="col-sm-12">
             <div class="form-group">
 
-              <input type="number" name="area" class="form-control ltr rightplaceholder" autocomplete="off" maxlength="12"
-                placeholder="متراژ" required>
+              <input type="number" name="area" class="form-control ltr rightplaceholder" autocomplete="off" placeholder="متراژ"
+                required>
 
               <span class="afterinput">متر</span>
               <small id="textHelp" class="form-text text-muted text-left">۱۲ رقم بدون فاصله <span class="fa fa-long-arrow-left"></span>
@@ -85,8 +85,8 @@
           <div class="col-sm-12 forrent">
             <div class="form-group">
 
-              <input type="text" name="rent" class="form-control ltr currency" autocomplete="off" maxlength="12"
-                placeholder="اجاره" required aria-label="Dollar amount (with dot and two decimal places)">
+              <input type="text" name="rent" class="form-control ltr currency" autocomplete="off" placeholder="اجاره"
+                required aria-label="Dollar amount (with dot and two decimal places)">
 
               <span class="afterinput">تومان</span>
               <small id="textHelp" class="form-text text-muted text-left">۱۲ رقم بدون فاصله <span class="fa fa-long-arrow-left"></span>
@@ -96,8 +96,8 @@
           <div class="col-sm-12 forrent">
             <div class="form-group">
 
-              <input type="text" name="deposit" class="form-control ltr currency" autocomplete="off" maxlength="12"
-                placeholder="ودیعه" required aria-label="Dollar amount (with dot and two decimal places)">
+              <input type="text" name="deposit" class="form-control ltr currency" autocomplete="off" placeholder="ودیعه"
+                required aria-label="Dollar amount (with dot and two decimal places)">
 
               <span class="afterinput">تومان</span>
               <small id="textHelp" class="form-text text-muted text-left">۱۲ رقم بدون فاصله <span class="fa fa-long-arrow-left"></span>
@@ -107,8 +107,8 @@
           <div class="col-sm-12 forsale hidden">
             <div class="form-group">
 
-              <input type="text" name="price" class="form-control ltr currency " autocomplete="off" maxlength="12"
-                placeholder="قیمت" required aria-label="Dollar amount (with dot and two decimal places)">
+              <input type="text" name="price" class="form-control ltr currency " autocomplete="off" placeholder="قیمت"
+                required aria-label="Dollar amount (with dot and two decimal places)">
 
               <span class="afterinput">تومان</span>
               <small id="textHelp" class="form-text text-muted text-left">۱۲ رقم بدون فاصله <span class="fa fa-long-arrow-left"></span>
@@ -160,8 +160,8 @@
           </div>
           <div class="col-sm-12">
             <div class="form-group">
-              <input type="text" class="form-control ltr rightplaceholder" name="phone" autocomplete="off" placeholder="تلفن همراه"
-                required>
+              <input type="text" class="form-control ltr rightplaceholder" id="phone" name="phone" autocomplete="off"
+                placeholder="تلفن همراه" required>
               <small id="textHelp" class="form-text text-muted text-left">نمونه <span class="fa fa-long-arrow-left"></span>
                 09xx xxx xxxx <span class="fa fa-exclamation-circle"></span> </small>
 
@@ -244,6 +244,7 @@
   <script src="node_modules/rtl-bootstrap/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/bootstrapValidator.js"></script>
   <script src="js/bootstrapValidator-fa-IR.js"></script>
+  <script src="node_modules/cleave.js/dist/cleave.min.js "></script>
 
   <script>
     function limitText(limitField, limitCount, limitNum) {
@@ -337,33 +338,7 @@
 
     });
 
-    $(".currency").on("keyup", function (event) {
 
-
-      // When user select text in the document, also abort.
-      var selection = window.getSelection().toString();
-      if (selection !== '') {
-        return;
-      }
-
-      // When the arrow keys are pressed, abort.
-      if ($.inArray(event.keyCode, [38, 40, 37, 39]) !== -1) {
-        return;
-      }
-
-
-      var $this = $(this);
-
-      // Get the value.
-      var input = $this.val();
-
-      var input = input.replace(/[\D\s\._\-]+/g, "");
-      input = input ? parseInt(input, 10) : 0;
-
-      $this.val(function () {
-        return (input === 0) ? "" : input.toLocaleString("en-US");
-      });
-    });
     $(".custom-button").click(function () {
       $(".active").removeClass("active");
       $(this).addClass("active");
@@ -376,9 +351,30 @@
     $("#rentBtn").click(function () {
       $(".forsale").slideUp();
       $(".forrent").slideDown();
-
-   
     });
+
+    $('input').focusout(function () {
+      if ($(this).prop('required') && $(this).val().length <= 0) {
+        $(this).parent(".form-group").addClass('has-error');
+        $(this).nextAll('.help-block[data-bv-validator=notEmpty]').attr('style', 'display:block');
+      }
+    });
+
+
+
+    var cleave = new Cleave('.currency', {
+      delimiter: ',',
+      blocks: [3, 3, 3, 3, 3, 3, 3, 3, 3],
+      uppercase: true
+    });
+
+
+    var cleave = new Cleave('#phone', {
+      blocks: [4, 3, 4],
+      uppercase: true
+    });
+
+
 
   </script>
 </body>
