@@ -24,7 +24,7 @@
   align-items: flex-start;
 }
 .modal__bg {
-  background: transparent;
+  /* background: transparent; */
 }
 .modal__dialog {
   max-width: 668px;
@@ -50,7 +50,7 @@
 .modal__trigger {
   
 	
-	margin-bottom: 20px;
+	margin: 0 30px 20px 0;
 	height: 38px;
 	background-color: white;
 	border: 0;
