@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="node_modules/rtl-bootstrap/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
 
-  <link rel="stylesheet" href="css/modal.css">
+
   <link rel="stylesheet" href="css/style.css">
 
 </head>
@@ -79,11 +79,11 @@
       <div class="row">
 
         <div class="col col-md-12 col-sm-12">
-          <button id="cityButton" data-modal="#cityModal" class="modal__trigger custom-button">تغییر شهر</button>
+          <button id="cityButton" class="custom-button">تغییر شهر</button>
 
 
 
-          <button id="areaButton" data-modal="#areaModal" class="modal__trigger custom-button">تغییر منطقه</button>
+          <button id="areaButton" class="custom-button">تغییر منطقه</button>
 
         </div>
       </div>
@@ -856,155 +856,154 @@
   </div>
 
   <!-- City modal -->
-  <div id="cityModal" class="modal modal--align-top modal__bg" role="dialog" aria-hidden="true">
-    <div class="modal__dialog">
-      <div class="modal__content">
-        <h3>تغییر شهر</h1>
-          <div>
-
-            <ul class="city">
-              <li>استانهای شمالی</li>
-              <li><button>آذربایجان غربی</button></li>
-              <li><button>اردبیل</button></li>
-              <li><button>البرز</button></li>
-              <li><button>ایلام</button></li>
-              <li><button>بوشهر</button></li>
-              <li><button>چهارمحال و بختیاری</button></li>
-              <li><button>گیلان</button></li>
-              <li><button>مازندران</button></li>
-              <li><button>گرگان</button></li>
-            </ul>
-            <ul class="city">
-              <li>استانهای غربی</li>
-              <li><button>خوزستان</button></li>
-              <li><button>زنجان</button></li>
-              <li><button>سمنان</button></li>
-              <li><button>سیستان و بلوچستان</button></li>
-              <li><button>فارس</button></li>
-              <li><button>قزوین</button></li>
-            </ul>
-            <ul class="city">
-              <li>استان های شرقی</li>
-
-              <li>
-                <button>قم</button>
-              </li>
-              <li>
-                <button>کردستان</button>
-              </li>
-              <li>
-                <button>کرمان</button>
-              </li>
-              <li>
-                <button>کرمانشاه</button>
-              </li>
-              <li>
-                <button>کهگیلویه و بویراحمد</button>
-              </li>
-              <li>
-                <button>گلستان</button>
-              </li>
-            </ul>
-            <ul class="city">
-              <li>استان های جنوبی</li>
+  <div id="cityModal" class="image-modal">
+    <div class="contentmodal">
+      <span class="modalclose">
+        <svg class="" viewBox="0 0 24 24">
+          <path d="M19 6.41l-1.41-1.41-5.59 5.59-5.59-5.59-1.41 1.41 5.59 5.59-5.59 5.59 1.41 1.41 5.59-5.59 5.59 5.59 1.41-1.41-5.59-5.59z"></path>
+          <path d="M0 0h24v24h-24z" fill="none"></path>
+        </svg>
+      </span>
 
 
+      <ul class="city">
+        <li>استانهای شمالی</li>
+        <li><button class="cityBtn">آذربایجان غربی<span></span></button></li>
+        <li><button class="cityBtn">اردبیل<span></span></button></li>
+        <li><button class="cityBtn">البرز<span></span></button></li>
+        <li><button class="cityBtn">ایلام<span></span></button></li>
+        <li><button class="cityBtn">بوشهر<span></span></button></li>
+        <li><button class="cityBtn">چهارمحال و بختیاری<span></span></button></li>
+        <li><button class="cityBtn">گیلان<span></span></button></li>
+        <li><button class="cityBtn">مازندران<span></span></button></li>
+        <li><button class="cityBtn">گرگان<span></span></button></li>
+      </ul>
+      <ul class="city">
+        <li>استانهای غربی</li>
+        <li><button class="cityBtn">خوزستان<span></span></button></li>
+        <li><button class="cityBtn">زنجان<span></span></button></li>
+        <li><button class="cityBtn">سمنان<span></span></button></li>
+        <li><button class="cityBtn">سیستان و بلوچستان<span></span></button></li>
+        <li><button class="cityBtn">فارس<span></span></button></li>
+        <li><button class="cityBtn">قزوین<span></span></button></li>
+      </ul>
+      <ul class="city">
+        <li>استان های شرقی</li>
 
-              <li>
-                <button>گیلان</button>
-              </li>
-              <li>
-                <button>لرستان</button>
-              </li>
-              <li>
-                <button>مازندران</button>
-              </li>
-              <li>
-                <button>مرکزی</button>
-              </li>
-              <li>
-                <button>هرمزگان</button>
-              </li>
-              <li>
-                <button>همدان</button>
-              </li>
-              <li>
-                <button>یزد</button>
-              </li>
-            </ul>
+        <li>
+          <button class="cityBtn">قم<span></span></button>
+        </li>
+        <li>
+          <button class="cityBtn">کردستان<span></span></button>
+        </li>
+        <li>
+          <button class="cityBtn">کرمان<span></span></button>
+        </li>
+        <li>
+          <button class="cityBtn">کرمانشاه<span></span></button>
+        </li>
+        <li>
+          <button class="cityBtn">کهگیلویه و بویراحمد<span></span></button>
+        </li>
+        <li>
+          <button class="cityBtn">گلستان<span></span></button>
+        </li>
+      </ul>
+      <ul class="city">
+        <li>استان های جنوبی</li>
 
-          </div>
 
-          <!-- modal close button -->
-          <a href="" class="modal__close demo-close">
-            <svg class="" viewBox="0 0 24 24">
-              <path d="M19 6.41l-1.41-1.41-5.59 5.59-5.59-5.59-1.41 1.41 5.59 5.59-5.59 5.59 1.41 1.41 5.59-5.59 5.59 5.59 1.41-1.41-5.59-5.59z" />
-              <path d="M0 0h24v24h-24z" fill="none" /></svg>
-          </a>
-      </div>
+
+        <li>
+          <button class="cityBtn">گیلان<span></span></button>
+        </li>
+        <li>
+          <button class="cityBtn">لرستان<span></span></button>
+        </li>
+        <li>
+          <button class="cityBtn">مازندران<span></span></button>
+        </li>
+        <li>
+          <button class="cityBtn">مرکزی<span></span></button>
+        </li>
+        <li>
+          <button class="cityBtn">هرمزگان<span></span></button>
+        </li>
+        <li>
+          <button class="cityBtn">همدان<span></span></button>
+        </li>
+        <li>
+          <button class="cityBtn">یزد<span></span></button>
+        </li>
+      </ul>
+
     </div>
   </div>
 
   <!-- Area modal -->
   <!-- The Modal -->
-  <div id="areaModal" class="modal modal--align-top modal__bg" role="dialog" aria-hidden="true">
-    <div class="modal__dialog">
-      <div class="modal__content">
-        <h3></h3>
-        <div class="areaContent row">
 
-          <div class="wbtn text-center"><button class="circ">01</button></div>
-          <div class="wbtn text-center"><button class="circ">02</button></div>
-          <div class="wbtn text-center"><button class="circ">03</button></div>
-          <div class="wbtn text-center"><button class="circ">04</button></div>
-          <div class="wbtn text-center"><button class="circ">05</button></div>
-          <div class="wbtn text-center"><button class="circ">06</button></div>
-          <div class="wbtn text-center"><button class="circ">07</button></div>
-          <div class="wbtn text-center"><button class="circ">08</button></div>
-          <div class="wbtn text-center"><button class="circ">09</button></div>
-          <div class="wbtn text-center"><button class="circ">10</button></div>
-          <div class="wbtn text-center"><button class="circ">11</button></div>
-          <div class="wbtn text-center"><button class="circ">12</button></div>
-          <div class="wbtn text-center"><button class="circ">13</button></div>
-          <div class="wbtn text-center"><button class="circ">14</button></div>
-          <div class="wbtn text-center"><button class="circ">15</button></div>
-          <div class="wbtn text-center"><button class="circ">16</button></div>
-          <div class="wbtn text-center"><button class="circ">17</button></div>
-          <div class="wbtn text-center"><button class="circ">18</button></div>
-          <div class="wbtn text-center"><button class="circ">19</button></div>
-          <div class="wbtn text-center"><button class="circ">20</button></div>
-          <div class="wbtn text-center"><button class="circ">21</button></div>
-          <div class="wbtn text-center"><button class="circ">22</button></div>
-          <div class="wbtn text-center"><button class="circ">23</button></div>
-          <div class="wbtn text-center"><button class="circ">24</button></div>
-          <div class="wbtn text-center"><button class="circ">25</button></div>
-          <div class="wbtn text-center"><button class="circ">26</button></div>
-          <div class="wbtn text-center"><button class="circ">27</button></div>
-          <div class="wbtn text-center"><button class="circ">28</button></div>
-          <div class="wbtn text-center"><button class="circ">29</button></div>
-          <div class="wbtn text-center"><button class="circ">30</button></div>
 
-        </div>
+  <div id="areaModal" class="image-modal">
+      <div class="contentmodal">
+          <span class="modalclose">
+            <svg class="" viewBox="0 0 24 24">
+              <path d="M19 6.41l-1.41-1.41-5.59 5.59-5.59-5.59-1.41 1.41 5.59 5.59-5.59 5.59 1.41 1.41 5.59-5.59 5.59 5.59 1.41-1.41-5.59-5.59z"></path>
+              <path d="M0 0h24v24h-24z" fill="none"></path>
+            </svg>
+          </span>
+    
 
-        <!-- modal close button -->
-        <a href="" class="modal__close demo-close">
-          <svg class="" viewBox="0 0 24 24">
-            <path d="M19 6.41l-1.41-1.41-5.59 5.59-5.59-5.59-1.41 1.41 5.59 5.59-5.59 5.59 1.41 1.41 5.59-5.59 5.59 5.59 1.41-1.41-5.59-5.59z" />
-            <path d="M0 0h24v24h-24z" fill="none" /></svg>
-        </a>
-      </div>
+      <div class="wbtn text-center"><button class="circ">1</button></div>
+      <div class="wbtn text-center"><button class="circ">2</button></div>
+      <div class="wbtn text-center"><button class="circ">3</button></div>
+      <div class="wbtn text-center"><button class="circ">4</button></div>
+      <div class="wbtn text-center"><button class="circ">5</button></div>
+      <div class="wbtn text-center"><button class="circ">6</button></div>
+      <div class="wbtn text-center"><button class="circ">7</button></div>
+      <div class="wbtn text-center"><button class="circ">8</button></div>
+      <div class="wbtn text-center"><button class="circ">9</button></div>
+      <div class="wbtn text-center"><button class="circ">10</button></div>
+      <div class="wbtn text-center"><button class="circ">11</button></div>
+      <div class="wbtn text-center"><button class="circ">12</button></div>
+      <div class="wbtn text-center"><button class="circ">13</button></div>
+      <div class="wbtn text-center"><button class="circ">14</button></div>
+      <div class="wbtn text-center"><button class="circ">15</button></div>
+      <div class="wbtn text-center"><button class="circ">16</button></div>
+      <div class="wbtn text-center"><button class="circ">17</button></div>
+      <div class="wbtn text-center"><button class="circ">18</button></div>
+      <div class="wbtn text-center"><button class="circ">19</button></div>
+      <div class="wbtn text-center"><button class="circ">20</button></div>
+      <div class="wbtn text-center"><button class="circ">21</button></div>
+      <div class="wbtn text-center"><button class="circ">22</button></div>
+      <div class="wbtn text-center"><button class="circ">23</button></div>
+      <div class="wbtn text-center"><button class="circ">24</button></div>
+      <div class="wbtn text-center"><button class="circ">25</button></div>
+      <div class="wbtn text-center"><button class="circ">26</button></div>
+      <div class="wbtn text-center"><button class="circ">27</button></div>
+      <div class="wbtn text-center"><button class="circ">28</button></div>
+      <div class="wbtn text-center"><button class="circ">29</button></div>
+      <div class="wbtn text-center"><button class="circ">30</button></div>
+
+
+
+
+
     </div>
   </div>
+  
   <!-- The Modal -->
   <div id="myModal" class="image-modal">
     <span class="pclose">&times;</span>
     <div id="image-modal-body"></div>
     <div id="caption"></div>
   </div>
+  <!-- The Modal -->
+
 
   <script src="node_modules/jquery/dist/jquery.min.js"></script>
   <script src="node_modules/rtl-bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/modal.js"></script>
+
   <script>
     $(document).ready(function () {
       $(".mobileN").click(function () {
@@ -1044,44 +1043,36 @@
       });
       $(".search-plus").click(function () {
         $("#image-modal-body").html($(".container-images").html());
-        $(".image-modal").fadeIn("slow");
+        $("#myModal").fadeIn("slow");
       });
       $(".pclose").click(function () {
-        $(".image-modal").fadeOut("slow");
+        $("myModal").fadeOut("slow");
       });
       $(".image-modal").click(function () {
-        $(".image-modal").fadeOut("slow");
+        $("#myModal").fadeOut("slow");
       });
-      $('#cityButton').click(function(){
-        $('#cityModal').addClass('modal--active');
-        $('#cityModal .modal__content').addClass('modal__content--active');
+      $('#cityButton').click(function () {
+
+        $("#cityModal").fadeIn("slow");
+      })
+      $('#areaButton').click(function () {
+
+        $("#areaModal").fadeIn("slow");
+      })
+      $(".modalclose").click(function () {
+
+        $("#cityModal").fadeOut("slow");
+        $("#areaModal").fadeOut("slow");
+      })
+
+      $(".cityBtn").click(function () {
+        $("#cityButton").text($(this).text());
+        $("#cityModal").fadeOut("slow");
 
       })
-      $('#areaButton').click(function(){
-        $('#areaModal').addClass('modal--active');
-        $('#areaModal .modal__content').addClass('modal__content--active');
-
-      })
-      $("ul.city button").click(function () {
-        //alert($(this).text());
-        var city = $(this).text();
-        $('#cityButton').removeAttr('style');
-        $("#cityButton").text(city);
-        $('#cityModal').removeClass('modal--active');
-        $('#cityModal .modal__content').removeClass('modal__content--active');
-        //$('.modal__trigger--active').removeClass('modal__trigger--active');
-       // $('#modal__temp').remove();
-
-      })
-      $(".areaContent button").click(function () {
-        //alert($(this).text());
-        var city ="منطقه " + $(this).text();
-        $('#areaButton').removeAttr('style');
-        $("#areaButton").text(city);
-        $('#areaModal').removeClass('modal--active');
-        $('#areaModal .modal__content').removeClass('modal__content--active');
-        //$('.modal__trigger--active').removeClass('modal__trigger--active');
-       // $('#modal__temp').remove();
+      $(".circ").click(function () {
+        $("#areaButton").text("منطقه " + $(this).text());
+        $("#areaModal").fadeOut("slow");
 
       })
 

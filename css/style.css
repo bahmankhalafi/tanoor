@@ -1,4 +1,8 @@
 @import url(fontiran.css);
+* , *:focus,button , button:focus
+,a, a:focus{
+  outline:none 
+}
 body {
   font-family: "IRANSans" !important;
   font-size: 14px;
@@ -19,7 +23,25 @@ ul, ol {
   padding: 0;
   margin: 0;
 }
-
+.modalclose {
+  width: 40px;
+  position: absolute;
+  top: -80px;
+  left: 0;
+  margin: 1.2rem;
+  padding: 0.6rem;
+  background: rgba(109, 109, 109, 0.3);
+  border-radius: 50%;
+  cursor: pointer;
+  color: #fff;
+  -webkit-text-fill-color: #fff;
+}
+.modal-content svg{color:#fff;}
+#cityButton , #areaButton{margin-right: 35px;}
+#areaModal,#cityModal{background: #FBFBFB;}
+.contentmodal{position: relative; max-width: 552px;margin:0 auto;}
+#areaModal .contentmodal{width: 360px;margin:0 auto;}
+#areaModal .modalclose{left:-40px;}
 header {
   border-bottom: 1px solid #ebebeb;
   box-shadow: 0 1px 4px -1px #808080;
@@ -95,12 +117,21 @@ button.circ {
   border-radius: 50%;
   width: 50px;
   height: 50px;
-  margin-bottom: 3px;
+  margin: 5px;
   background: #fff;
-  border: 2px solid #666;
-  color: #666;
+  border: 1px solid #bec5cf;
+  color: #bec5cf;
   text-align: center;
-  font: 32px "IRANSans";
+  font: 22px "IRANSans";
+      font-weight: normal;
+  font-weight: 100;
+}
+button.circ:hover {
+  font-weight: 400;
+  border: 1px solid #000;
+  color: #000;
+  
+  
 }
 
 .form-control {
@@ -278,12 +309,13 @@ ul.city li button {
   border-bottom: 3px solid #000;
 }
 
+ul.city li button span{display: none;}
+ul.city li button:hover span{display: block;}
 ul.city li button:hover, .custom-button:hover, .active {
   /* border-bottom: 3px solid #000; */
   color: #000;
   font-weight: 600;
 }
-
 .pdetailr {
   position: relative;
   background-color: #FBFBFB;
@@ -853,12 +885,10 @@ input[type='number'] {
 input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
-
+.areaContent {max-width:360px;}
 .wbtn {
   -webkit-box-flex: 0;
-  -ms-flex: 0 0 20% !important;
-  flex: 0 0 20% !important;
-  max-width: 20%;
+ float: right;
 }
 
 .tabs {
@@ -1098,6 +1128,8 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   .tabs .content section h2 {
     display: block;
   }
+  #cityModal .contentmodal {max-width:276px;}
+  #areaModal .contentmodal {max-width:180px;}
 }
 
 /* 100% Image Width on Smaller Screens */

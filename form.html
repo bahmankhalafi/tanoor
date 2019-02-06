@@ -38,17 +38,17 @@
       <form id="newform" method="post" class="form-horizontal" role="form">
         <div class="row">
           <div class="col col-md-6  col-sm-6 col-xs-12 padb40">
-              <label class="custom"> آگهی اجاره
-                  <input id="rentBtn" type="radio" name="typeAd" checked="checked" />
-                  <span class="checkmark"></span>
-                </label>
-            
+            <label class="custom"> آگهی اجاره
+              <input id="rentBtn" type="radio" name="typeAd" checked="checked" />
+              <span class="checkmark"></span>
+            </label>
+
           </div>
           <div class="col col-md-6 col-sm-6">
-              <label class="custom"> آگهی فروش
-                  <input id="saleBtn" type="radio" name="typeAd" />
-                  <span class="checkmark"></span>
-                </label>
+            <label class="custom"> آگهی فروش
+              <input id="saleBtn" type="radio" name="typeAd" />
+              <span class="checkmark"></span>
+            </label>
           </div>
 
           <div class="col-sm-12">
@@ -61,7 +61,7 @@
                 <option value="land">زمین</option>
               </select>
             </div>
-          
+
             <div class="form-group">
               <select class="wide custom-form-select form-control" id="drpCity" name="country">
                 <option hidden disabled selected value="" class="option-disabled">کدام استان ؟</option>
@@ -73,7 +73,7 @@
                 <option value="gb">کرمان</option>
                 <option value="us">قم</option>
               </select>
-              
+
             </div>
           </div>
 
@@ -81,8 +81,8 @@
           <div class="col-sm-12">
             <div class="form-group">
 
-              <input type="text" name="area" class="form-control ltr rightplaceholder currency1" autocomplete="off" placeholder="متراژ"
-                required>
+              <input type="text" name="area" class="form-control ltr rightplaceholder currency1" autocomplete="off"
+                placeholder="متراژ" required>
 
               <span class="afterinput">متر</span>
               <small id="textHelp" class="form-text text-muted text-left">۱۲ رقم بدون فاصله <span class="fa fa-long-arrow-left"></span>
@@ -176,8 +176,9 @@
           </div>
           <div class="col-sm-12">
             <div class="form-group">
-              <textarea class="form-control" rows="5" name="limitedtextarea" id= "limitedtextarea"></textarea>
-              <small id="textareaHelp" class="form-text text-muted">کلمه <span>25</span>/<span id="limitCount">0</span></small>
+              <textarea class="form-control" rows="5" name="limitedtextarea" id="limitedtextarea" placeholder="جزئیات"></textarea>
+              <small id="textareaHelp" class="form-text text-muted"><span>25</span> / <span id="limitCount">0</span>
+                کلمه</small>
             </div>
           </div>
 
@@ -253,20 +254,20 @@
   <script src="node_modules/cleave.js/dist/cleave.min.js "></script>
 
   <script>
-  
-  $("#limitedtextarea").on('keyup', function () {
-        var words = this.value.match(/\S+/g).length;
 
-        if (words > 25) {
-            
-            var trimmed = $(this).val().split(/\s+/, 25).join(" ");
-            
-            $(this).val(trimmed + " ");
-        }
-        else {
-            $('#limitCount').text(words);
-            
-        }
+    $("#limitedtextarea").on('keyup', function () {
+      var words = this.value.match(/\S+/g).length;
+
+      if (words > 25) {
+
+        var trimmed = $(this).val().split(/\s+/, 25).join(" ");
+
+        $(this).val(trimmed + " ");
+      }
+      else {
+        $('#limitCount').text(words);
+
+      }
     });
 
     function readURL(input, id) {
@@ -292,10 +293,10 @@
             validators: {
               notEmpty: {
                 message: 'این فیلد نمی تواند خالی باشد!',
-              },regexp: {
-                        regexp: /^[0-9]|(,)+$/i,
-                        message: 'The full name can consist of alphabetical characters and spaces only'
-                    }
+              }, regexp: {
+                regexp: /^[0-9]|(,)+$/i,
+                message: 'The full name can consist of alphabetical characters and spaces only'
+              }
             },
           },
           rent: {
@@ -381,19 +382,23 @@
 
     var cleave1 = new Cleave('.currency1', {
       delimiter: ',',
-      blocks: [3,3,3,3,3,3,3,3,3]
+      numeral: true,
+      numeralThousandsGroupStyle: 'thousand'
     });
     var cleave2 = new Cleave('.currency2', {
       delimiter: ',',
-      blocks: [3,3,3,3,3,3,3,3,3]
+      numeral: true,
+      numeralThousandsGroupStyle: 'thousand'
     });
     var cleave3 = new Cleave('.currency3', {
       delimiter: ',',
-      blocks: [3,3,3,3,3,3,3,3,3]
+      numeral: true,
+      numeralThousandsGroupStyle: 'thousand'
     });
     var cleave4 = new Cleave('.currency4', {
       delimiter: ',',
-      blocks: [3,3,3,3,3,3,3,3,3]
+      numeral: true,
+      numeralThousandsGroupStyle: 'thousand'
     });
 
 
