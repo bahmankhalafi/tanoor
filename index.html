@@ -856,7 +856,7 @@
   </div>
 
   <!-- City modal -->
-  <div id="cityModal" class="modal modal__bg" role="dialog" aria-hidden="true">
+  <div id="cityModal" class="modal modal--align-top modal__bg" role="dialog" aria-hidden="true">
     <div class="modal__dialog">
       <div class="modal__content">
         <h3>تغییر شهر</h1>
@@ -864,7 +864,7 @@
 
             <ul class="city">
               <li>استانهای شمالی</li>
-              <li><button class="modal__close">آذربایجان غربی</button></li>
+              <li><button>آذربایجان غربی</button></li>
               <li><button>اردبیل</button></li>
               <li><button>البرز</button></li>
               <li><button>ایلام</button></li>
@@ -947,7 +947,7 @@
 
   <!-- Area modal -->
   <!-- The Modal -->
-  <div id="areaModal" class="modal modal__bg" role="dialog" aria-hidden="true">
+  <div id="areaModal" class="modal modal--align-top modal__bg" role="dialog" aria-hidden="true">
     <div class="modal__dialog">
       <div class="modal__content">
         <h3></h3>
@@ -1052,10 +1052,37 @@
       $(".image-modal").click(function () {
         $(".image-modal").fadeOut("slow");
       });
+      $('#cityButton').click(function(){
+        $('#cityModal').addClass('modal--active');
+        $('#cityModal .modal__content').addClass('modal__content--active');
+
+      })
+      $('#areaButton').click(function(){
+        $('#areaModal').addClass('modal--active');
+        $('#areaModal .modal__content').addClass('modal__content--active');
+
+      })
       $("ul.city button").click(function () {
         //alert($(this).text());
-        var t = $(this).text();
-        $(this).next("span").text(t);
+        var city = $(this).text();
+        $('#cityButton').removeAttr('style');
+        $("#cityButton").text(city);
+        $('#cityModal').removeClass('modal--active');
+        $('#cityModal .modal__content').removeClass('modal__content--active');
+        //$('.modal__trigger--active').removeClass('modal__trigger--active');
+       // $('#modal__temp').remove();
+
+      })
+      $(".areaContent button").click(function () {
+        //alert($(this).text());
+        var city ="منطقه " + $(this).text();
+        $('#areaButton').removeAttr('style');
+        $("#areaButton").text(city);
+        $('#areaModal').removeClass('modal--active');
+        $('#areaModal .modal__content').removeClass('modal__content--active');
+        //$('.modal__trigger--active').removeClass('modal__trigger--active');
+       // $('#modal__temp').remove();
+
       })
 
     });

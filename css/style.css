@@ -245,8 +245,9 @@ ul.city li {
 .custom-button::after {
   font-family: 'FontAwesome';
   content: '\f107';
-  padding-right:5px;
-  font-size: 14px
+  padding-right: 5px;
+  font-size: 14px;
+  float: left;
 }
 
 ul.city li button {
