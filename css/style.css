@@ -1,8 +1,8 @@
 @import url(fontiran.css);
-* , *:focus,button , button:focus
-,a, a:focus{
-  outline:none 
+*, *:focus, button, button:focus, a, a:focus {
+  outline: none
 }
+
 body {
   font-family: "IRANSans" !important;
   font-size: 14px;
@@ -23,6 +23,7 @@ ul, ol {
   padding: 0;
   margin: 0;
 }
+
 .modalclose {
   width: 40px;
   position: absolute;
@@ -36,12 +37,34 @@ ul, ol {
   color: #fff;
   -webkit-text-fill-color: #fff;
 }
-.modal-content svg{color:#fff;}
-#cityButton , #areaButton{margin-right: 35px;}
-#areaModal,#cityModal{background: #FBFBFB;}
-.contentmodal{position: relative; max-width: 552px;margin:0 auto;}
-#areaModal .contentmodal{width: 360px;margin:0 auto;}
-#areaModal .modalclose{left:-40px;}
+
+.modal-content svg {
+  color: #fff;
+}
+
+#cityButton, #areaButton {
+  margin-right: 5px;
+}
+
+#areaModal, #cityModal {
+  background: #FBFBFB;
+}
+
+.contentmodal {
+  position: relative;
+  max-width: 966px;
+  margin: 0 auto;
+}
+
+#areaModal .contentmodal {
+  width: 480px;
+  margin: 0 auto;
+}
+
+#areaModal .modalclose {
+  left: -40px;
+}
+
 header {
   border-bottom: 1px solid #ebebeb;
   box-shadow: 0 1px 4px -1px #808080;
@@ -123,15 +146,14 @@ button.circ {
   color: #bec5cf;
   text-align: center;
   font: 22px "IRANSans";
-      font-weight: normal;
+  font-weight: normal;
   font-weight: 100;
 }
+
 button.circ:hover {
   font-weight: 400;
   border: 1px solid #000;
   color: #000;
-  
-  
 }
 
 .form-control {
@@ -261,7 +283,6 @@ ul.city li {
 
 .custom-button {
   cursor: pointer;
-  width: 120px;
   font-size: 14px;
   background-color: #FBFBFB;
   border: 0;
@@ -309,13 +330,20 @@ ul.city li button {
   border-bottom: 3px solid #000;
 }
 
-ul.city li button span{display: none;}
-ul.city li button:hover span{display: block;}
+ul.city li button span {
+  display: none;
+}
+
+ul.city li button:hover span {
+  display: block;
+}
+
 ul.city li button:hover, .custom-button:hover, .active {
   /* border-bottom: 3px solid #000; */
   color: #000;
   font-weight: 600;
 }
+
 .pdetailr {
   position: relative;
   background-color: #FBFBFB;
@@ -405,6 +433,10 @@ ul.city li button:hover, .custom-button:hover, .active {
   left: 0;
   margin: 0 0 30px 10px;
   text-align: left;
+}
+
+.btn-detail::after {
+  content: none;
 }
 
 .pimage {
@@ -503,7 +535,7 @@ ul.city li button:hover, .custom-button:hover, .active {
   /* Hidden by default */
   position: fixed;
   /* Stay in place */
-  z-index: 1;
+  z-index: 100;
   /* Sit on top */
   padding-top: 100px;
   /* Location of the box */
@@ -885,15 +917,18 @@ input[type='number'] {
 input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
-.areaContent {max-width:360px;}
+
+.areaContent {
+  max-width: 360px;
+}
+
 .wbtn {
   -webkit-box-flex: 0;
- float: right;
+  float: right;
 }
 
 .tabs {
   position: relative;
-  width: 75%;
   padding-bottom: 20px;
 }
 
@@ -1115,11 +1150,10 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
     width: 100%;
   }
   .tabs ul li {
-    width: 50%;
-    float: right;
+    padding: 0;
   }
   .tabs ul li label {
-    padding: 5px;
+    padding: 0px;
     border-radius: 5px;
   }
   .tabs .content {
@@ -1128,8 +1162,13 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   .tabs .content section h2 {
     display: block;
   }
-  #cityModal .contentmodal {max-width:276px;}
-  #areaModal .contentmodal {max-width:180px;}
+  #cityModal .contentmodal {
+    max-width: 276px;
+  }
+  #areaModal .contentmodal {
+    max-width: 300px;
+  }
+  .pdesc .close {margin: 0 0 20px 20px;}
 }
 
 /* 100% Image Width on Smaller Screens */
